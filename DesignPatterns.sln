@@ -3,9 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleFactory", "SimpleFactory", "{0ECB24B7-6E9C-4712-B0DC-D5181AE9E24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFactory.Console", "SimpleFactory\SimpleFactory.Console\SimpleFactory.Console.csproj", "{19C17DBF-8E31-4BDD-B1F9-F637D80B14A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleFactory.Common", "SimpleFactory\SimpleFactory.Common\SimpleFactory.Common.csproj", "{0342FDA1-E0F6-4980-BBC5-6FAA83EE5199}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19C17DBF-8E31-4BDD-B1F9-F637D80B14A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C17DBF-8E31-4BDD-B1F9-F637D80B14A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C17DBF-8E31-4BDD-B1F9-F637D80B14A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C17DBF-8E31-4BDD-B1F9-F637D80B14A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0342FDA1-E0F6-4980-BBC5-6FAA83EE5199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0342FDA1-E0F6-4980-BBC5-6FAA83EE5199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0342FDA1-E0F6-4980-BBC5-6FAA83EE5199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0342FDA1-E0F6-4980-BBC5-6FAA83EE5199}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19C17DBF-8E31-4BDD-B1F9-F637D80B14A7} = {0ECB24B7-6E9C-4712-B0DC-D5181AE9E24A}
+		{0342FDA1-E0F6-4980-BBC5-6FAA83EE5199} = {0ECB24B7-6E9C-4712-B0DC-D5181AE9E24A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA39F0F4-5798-4A8E-AA24-060D8AB159C9}
