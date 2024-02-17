@@ -20,7 +20,7 @@ namespace Strategy.Winform
         private void button1_Click(object sender, EventArgs e)
         {
             var cashSuper = new CashContext(comboBox1.SelectedItem.ToString());
-            double totalPrices =  cashSuper.GetResult(Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox2.Text));
+            double totalPrices = cashSuper.GetResult(Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox2.Text));
             total += totalPrices;
             listBox1.Items.Add("单价：" + textBox1.Text + " 数量：" + textBox2.Text + " " + comboBox1.SelectedItem + " 合计：" + totalPrices);
             label4.Text = total.ToString();
