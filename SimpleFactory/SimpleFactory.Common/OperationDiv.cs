@@ -1,6 +1,6 @@
 ﻿namespace SimpleFactoryCommon
 {
-    internal class OperationDiv : Operation
+    public class OperationDiv : Operation
     {
         public override double GetResult() => NumberA / NumberB;
     }
