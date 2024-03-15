@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TemplateMethod\TemplateMethod.Common\TemplateMethod.Common.csproj" />
+    <ProjectReference Include="..\TemplateMethod.Common\TemplateMethod.Common.csproj" />
   </ItemGroup>
 
 </Project>
