@@ -2,8 +2,7 @@
 {
     public interface INotifier
     {
-        void Attach(Observer observer);
-        void Detach(Observer observer);
+        public delegate void EventHandler();
         void Notify();
         string SubjectState { get; set; }
     }

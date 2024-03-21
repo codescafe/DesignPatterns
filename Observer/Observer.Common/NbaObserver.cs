@@ -1,14 +1,18 @@
 ﻿namespace Observer.Common
 {
-    public class NbaObserver : Observer
+    public class NbaObserver
     {
-        public NbaObserver(string name, INotifier sub) : base(name, sub)
+        private string name;
+        private INotifier sub;
+        public NbaObserver(string name, INotifier sub)
         {
+            this.name = name;
+            this.sub = sub;
         }
 
-        public override void Update()
+        public void CloseNbaDirectSeeding()
         {
-            Console.WriteLine($"{sub.SubjectState}, {name}, close the NBA and continue working");
+            Console.WriteLine($"{sub.SubjectState}, {name}, close the NBA direct seeding and continue working");
         }
     }
 }

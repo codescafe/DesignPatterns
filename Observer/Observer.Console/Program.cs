@@ -1,23 +1,13 @@
 ﻿using Observer.Common;
 
-INotifier boss = new Boss();
+Boss boss = new Boss();
 
-var nbaObserver = new NbaObserver("Tom", boss);
-var stockObserver = new StockObserver("Jerry", boss);
+StockObserver stockObserver1 = new StockObserver("Adam", boss);
+NbaObserver nbaObserver1 = new NbaObserver("Ellen", boss);
 
-boss.Attach(nbaObserver);
-boss.Attach(stockObserver);
+boss.Update += stockObserver1.CloseStockMarket;
+boss.Update += nbaObserver1.CloseNbaDirectSeeding;
 
-boss.SubjectState = "I am back";
+boss.SubjectState = "Boss is back";
+
 boss.Notify();
-
-INotifier secretary = new Secretary();
-
-var nbaObserver2 = new NbaObserver("Tom", secretary);
-var stockObserver2 = new StockObserver("Jerry", secretary);
-
-secretary.Attach(nbaObserver2);
-secretary.Attach(stockObserver2);
-
-secretary.SubjectState = "Boss is back";
-secretary.Notify();

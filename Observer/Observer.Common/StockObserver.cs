@@ -1,14 +1,18 @@
 ﻿namespace Observer.Common
 {
-    public class StockObserver : Observer
+    public class StockObserver
     {
-        public StockObserver(string name, INotifier sub) : base(name, sub)
+        private string name;
+        private INotifier sub;
+        public StockObserver(string name, INotifier sub)
         {
+            this.name = name;
+            this.sub = sub;
         }
 
-        public override void Update()
+        public void CloseStockMarket()
         {
-            Console.WriteLine($"{sub.SubjectState}, {name}, close the stock market quotes and continue working");
+            Console.WriteLine($"{sub.SubjectState}, {name}, close the stock market and continue working");
         }
     }
 }

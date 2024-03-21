@@ -2,24 +2,13 @@
 {
     public class Boss : INotifier
     {
-        private List<Observer> observers = new List<Observer>();
+        public event INotifier.EventHandler Update;
 
-        public void Attach(Observer observer)
-        {
-            observers.Add(observer);
-        }
-
-        public void Detach(Observer observer)
-        {
-            observers.Remove(observer);
-        }
+        private string action;
 
         public void Notify()
         {
-            foreach (var observer in observers)
-            {
-                observer.Update();
-            }
+            Update();
         }
 
         public string SubjectState { get; set; }
